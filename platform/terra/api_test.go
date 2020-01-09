@@ -1867,20 +1867,22 @@ var delegateDst = blockatlas.Tx{
 	Meta: blockatlas.MultiCurrencyAnyAction{
 		Title: blockatlas.AnyActionDelegation,
 		Key:   blockatlas.KeyStakeDelegate,
-		Currencies: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uluna"],
-				Value:      "1000000",
-				CurrencyID: "uluna",
+		Currencies: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uluna"],
+				Value:    "1000000",
+				TokenID:  "uluna",
+				Name:     coin.Terra().Name,
 			},
 		},
-		Fees: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uluna"],
-				Value:      "3288",
-				CurrencyID: "uluna",
+		Fees: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uluna"],
+				Value:    "3288",
+				TokenID:  "uluna",
+				Name:     coin.Terra().Name,
 			},
 		},
 	},
@@ -1900,20 +1902,22 @@ var unDelegateDst = blockatlas.Tx{
 	Meta: blockatlas.MultiCurrencyAnyAction{
 		Title: blockatlas.AnyActionUndelegation,
 		Key:   blockatlas.KeyStakeDelegate,
-		Currencies: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uluna"],
-				Value:      "15780040401",
-				CurrencyID: "uluna",
+		Currencies: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uluna"],
+				Value:    "15780040401",
+				TokenID:  "uluna",
+				Name:     coin.Terra().Name,
 			},
 		},
-		Fees: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uluna"],
-				Value:      "3725",
-				CurrencyID: "uluna",
+		Fees: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uluna"],
+				Value:    "3725",
+				TokenID:  "uluna",
+				Name:     coin.Terra().Name,
 			},
 		},
 	},
@@ -1934,44 +1938,50 @@ var claimRewardDst1 = blockatlas.Tx{
 	Meta: blockatlas.MultiCurrencyAnyAction{
 		Title: blockatlas.AnyActionClaimRewards,
 		Key:   blockatlas.KeyStakeClaimRewards,
-		Currencies: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["ukrw"],
-				Value:      "287872456825",
-				CurrencyID: "ukrw",
+		Currencies: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["ukrw"],
+				Value:    "287872456825",
+				TokenID:  "ukrw",
+				Name:     coin.Terra().Name,
 			},
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uluna"],
-				Value:      "1963341",
-				CurrencyID: "uluna",
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uluna"],
+				Value:    "1963341",
+				TokenID:  "uluna",
+				Name:     coin.Terra().Name,
 			},
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["umnt"],
-				Value:      "29249089",
-				CurrencyID: "umnt",
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["umnt"],
+				Value:    "29249089",
+				TokenID:  "umnt",
+				Name:     coin.Terra().Name,
 			},
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["usdr"],
-				Value:      "80490",
-				CurrencyID: "usdr",
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["usdr"],
+				Value:    "80490",
+				TokenID:  "usdr",
+				Name:     coin.Terra().Name,
 			},
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uusd"],
-				Value:      "17",
-				CurrencyID: "uusd",
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uusd"],
+				Value:    "17",
+				TokenID:  "uusd",
+				Name:     coin.Terra().Name,
 			},
 		},
-		Fees: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uluna"],
-				Value:      "20513",
-				CurrencyID: "uluna",
+		Fees: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uluna"],
+				Value:    "20513",
+				TokenID:  "uluna",
+				Name:     coin.Terra().Name,
 			},
 		},
 	},
@@ -1992,44 +2002,50 @@ var claimRewardDst2 = blockatlas.Tx{
 	Meta: blockatlas.MultiCurrencyAnyAction{
 		Title: blockatlas.AnyActionClaimRewards,
 		Key:   blockatlas.KeyStakeClaimRewards,
-		Currencies: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["ukrw"],
-				Value:      "32181037226453",
-				CurrencyID: "ukrw",
+		Currencies: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["ukrw"],
+				Value:    "32181037226453",
+				TokenID:  "ukrw",
+				Name:     coin.Terra().Name,
 			},
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uluna"],
-				Value:      "66292771689",
-				CurrencyID: "uluna",
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uluna"],
+				Value:    "66292771689",
+				TokenID:  "uluna",
+				Name:     coin.Terra().Name,
 			},
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["umnt"],
-				Value:      "2697515175",
-				CurrencyID: "umnt",
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["umnt"],
+				Value:    "2697515175",
+				TokenID:  "umnt",
+				Name:     coin.Terra().Name,
 			},
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["usdr"],
-				Value:      "7903733",
-				CurrencyID: "usdr",
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["usdr"],
+				Value:    "7903733",
+				TokenID:  "usdr",
+				Name:     coin.Terra().Name,
 			},
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uusd"],
-				Value:      "943",
-				CurrencyID: "uusd",
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uusd"],
+				Value:    "943",
+				TokenID:  "uusd",
+				Name:     coin.Terra().Name,
 			},
 		},
-		Fees: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uluna"],
-				Value:      "3015",
-				CurrencyID: "uluna",
+		Fees: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uluna"],
+				Value:    "3015",
+				TokenID:  "uluna",
+				Name:     coin.Terra().Name,
 			},
 		},
 	},
