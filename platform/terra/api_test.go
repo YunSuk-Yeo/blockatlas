@@ -1792,26 +1792,29 @@ var transferDst = blockatlas.Tx{
 	Status: blockatlas.StatusCompleted,
 	Type:   blockatlas.TxMultiCurrencyTransfer,
 	Meta: blockatlas.MultiCurrencyTransfer{
-		Currencies: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["ukrw"],
-				Value:      "480000000000",
-				CurrencyID: "ukrw",
+		Currencies: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["ukrw"],
+				Value:    "480000000000",
+				TokenID:  "ukrw",
+				Name:     coin.Terra().Name,
 			},
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["uluna"],
-				Value:      "1771645906",
-				CurrencyID: "uluna",
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["uluna"],
+				Value:    "1771645906",
+				TokenID:  "uluna",
+				Name:     coin.Terra().Name,
 			},
 		},
-		Fees: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["ukrw"],
-				Value:      "1177",
-				CurrencyID: "ukrw",
+		Fees: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["ukrw"],
+				Value:    "1177",
+				TokenID:  "ukrw",
+				Name:     coin.Terra().Name,
 			},
 		},
 	},
@@ -1829,20 +1832,22 @@ var failedTransferDst = blockatlas.Tx{
 	Type:   blockatlas.TxMultiCurrencyTransfer,
 	Memo:   "3642766313",
 	Meta: blockatlas.MultiCurrencyTransfer{
-		Currencies: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["ukrw"],
-				Value:      "430000000000",
-				CurrencyID: "ukrw",
+		Currencies: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["ukrw"],
+				Value:    "430000000000",
+				TokenID:  "ukrw",
+				Name:     coin.Terra().Name,
 			},
 		},
-		Fees: []blockatlas.Currency{
-			blockatlas.Currency{
-				Decimals:   coin.Terra().Decimals,
-				Symbol:     DenomMap["ukrw"],
-				Value:      "1166",
-				CurrencyID: "ukrw",
+		Fees: []blockatlas.NativeTokenTransfer{
+			blockatlas.NativeTokenTransfer{
+				Decimals: coin.Terra().Decimals,
+				Symbol:   DenomMap["ukrw"],
+				Value:    "1166",
+				TokenID:  "ukrw",
+				Name:     coin.Terra().Name,
 			},
 		},
 	},

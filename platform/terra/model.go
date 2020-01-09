@@ -190,13 +190,14 @@ type Amount struct {
 // Amounts - the array of Amount
 type Amounts []Amount
 
-func (amounts Amounts) toCurrencies() (currenies []blockatlas.Currency) {
+func (amounts Amounts) toCurrencies() (currenies []blockatlas.NativeTokenTransfer) {
 	for _, amt := range amounts {
-		currenies = append(currenies, blockatlas.Currency{
-			Decimals:   coin.Terra().Decimals,
-			Symbol:     DenomMap[amt.Denom],
-			Value:      blockatlas.Amount(amt.Quantity),
-			CurrencyID: amt.Denom,
+		currenies = append(currenies, blockatlas.NativeTokenTransfer{
+			Name:     coin.Terra().Name,
+			Symbol:   DenomMap[amt.Denom],
+			TokenID:  amt.Denom,
+			Decimals: coin.Terra().Decimals,
+			Value:    blockatlas.Amount(amt.Quantity),
 		})
 	}
 	return
